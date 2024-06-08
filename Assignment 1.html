@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Operations</title>
+    <style>
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.result-container {
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <p id="result"></p>
+    </div>
+   <script>
+     
+document.addEventListener("DOMContentLoaded", function () {
+    
+    let a = 10;
+    let b = 11;
+    let c = 12;
+    
+    let preIncrement = ++a; 
+    let postIncrement = a++; 
+    let preDecrement = --a; 
+    let postDecrement = a--;
+
+  
+    const resultElement = document.getElementById("result");
+    resultElement.innerHTML = `
+        Result:<br>
+        The value of a is: ${a}<br><br><hr><br>
+        The value of ++a is: ${preIncrement}<br>
+        Now the value of a is: ${b}<br><br><br>
+        The value of a++ is: ${postIncrement}<br>
+        Now the value of a is: ${c}<br><br><br>
+        The value of --a is: ${preDecrement}<br>
+        Now the value of a is: ${b}<br><br><br>
+        The value of a-- is: ${postDecrement}<br>
+        Now the value of a is: ${a}
+    `;
+});
+
+   </script>
+</body>
+</html>

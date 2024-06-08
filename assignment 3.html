@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Program</title>
+    <style>
+       
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            padding: 5px;
+            margin: 5px 0;
+            width: 200px;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #greeting {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Greeting Program</h1>
+    <label for="name">Enter your name:</label>
+    <input type="text" id="name" placeholder="Your name">
+    <button onclick="greetUser()">Greet</button>
+    <div id="greeting"></div>
+
+    <script>
+        
+        function greetUser() {
+            var name = document.getElementById("name").value;
+            var greetingDiv = document.getElementById("greeting");
+            if (name) {
+                greetingDiv.innerText = "Hello, " + name + "! Welcome!";
+            } else {
+                greetingDiv.innerText = "Please enter your name!";
+            }
+        }
+    </script>
+</body>
+</html>
